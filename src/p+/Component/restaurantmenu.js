@@ -1,10 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useState,useEffect } from "react";
-const Restaurantmenu =()=>
+const Restaurantmenu =( )=>
 {
     
-const param =useParams()
-const {id}=param;
+    const {id} =useParams();
 return (
 <div>
     <h2>Restaurant id:{id}</h2>

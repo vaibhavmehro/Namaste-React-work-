@@ -1,5 +1,4 @@
-import React, { Children } from "react";
-import  ReactDOM from "react-dom/client";
+import React from "react";
 import {Header} from "./header";
 import Footer from "./footer";
 import About  from "./About";
@@ -8,6 +7,8 @@ import Body from "./body";
 import Error from "./Error";
 import Contact from "./contact";
 import Restaurantmenu from "./restaurantmenu";
+import Profile from "./Profile";
+import ReactDOM from "react-dom/client"
     const Applayout =()=>
     {
         return (
@@ -31,7 +32,12 @@ import Restaurantmenu from "./restaurantmenu";
                 {
 
                 path:"/about",
-                element:<About/>
+                element:<About/>,
+                children:[
+                    {
+                        path: "profile",
+                        element:<Profile/>
+                }],
             },
             {
                 path:"/contact",
