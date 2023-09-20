@@ -42,13 +42,11 @@ if(filteredRestaurants?.length==0)
     
     return  (
       <>
-      <div className="search">
-        <input type="text"
-        className="search-text"
-        placeholder="Search"
+      <div className="justify-between px-20 p-5  ">
+        <input type="text"className=" ring-2 ring-offset-2 hover:ring-offset-4" placeholder="Search "
         value={searchText}
         onChange={(e)=>{setSearchText(e.target.value)}}/>
-        <button className="search-btn"
+        <button className="justify-center bg-green-400 px-5  m-5"
         onClick={()=>{
             const data=filter(searchText,allRestaurant);
             setFilteredRestaurants(data);
@@ -58,7 +56,7 @@ if(filteredRestaurants?.length==0)
         
         >Search</button>
       </div>
-      <div className="restaurant-list">
+      <div className="flex flex-wrap bg-violet-50">
           {filteredRestaurants?.map((rest)=>{return <Restaurantcard {...rest.info}/>})}
         </div>
         </>
