@@ -13,7 +13,7 @@ import Shimmer from "./shimmer";
 // import Instamart from "./Instamart"
 import { lazy } from "react";
 
-const Instamart=lazy(()=>import("./Instamart"));
+const Instamart=lazy(()=>import("./Instamart") );
     const Applayout =()=>
     {
         return (

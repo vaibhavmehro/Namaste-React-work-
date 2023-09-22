@@ -3,4 +3,4 @@ dist
 parcel catch
 package.json
 .parcel-cache
-
+.vscode

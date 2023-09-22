@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import  logo from "../asset/logo.png";
 import { Link } from "react-router-dom";
+import userContext from "../Util/userContext";
 export const Title =() => {
     return (
         <a href="/">
@@ -9,10 +10,11 @@ export const Title =() => {
     </a>
     )
 }
-
 export const Header =()=> {
 
     const [logged,setLogged] =useState(false);
+
+    const {user} =useContext(userContext);
     return (
         <div className="flex justify-between bg-pink-50">
             <Title></Title>
@@ -26,7 +28,8 @@ export const Header =()=> {
                 
             </ul>
         </div>
-        <div className="m-10">
+        <div className="m-10 space-x-5">
+           <span className="m-10 p-5"> {user.name}</span>
            {logged?(<button  className="bg-green-500 w-100 border-radius: 0.375rem ring-2 ring-offset-2 hover:ring-offset-4" onClick={()=>setLogged(false) }>Logout</button>):
             (<button className="bg-red-500 w-100 border-radius: 0.375rem ring-2 ring-offset-2 hover:ring-offset-4"  onClick={()=>setLogged(true)}>Login</button>)}
             </div>
