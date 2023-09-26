@@ -13,3 +13,4 @@ Types of CSS Used
 ->Props drilling is the process by which we add the props from parents to its child to make the changes in the very lowest children. 
 ->Redux is used to handle the data layer and to manage the data.The modification of the element in the redux store is done by the reducer function. 
 -> When we call the add item of menu it dispatches the action which calls the reducer function which update the slice of the redux store and item get added to the cart which is there in the redux store.
+->we use selector to read the data to change the value of the cart. 

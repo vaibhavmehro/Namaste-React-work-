@@ -10,18 +10,22 @@ import Restaurantmenu from "./restaurantmenu";
 import Profile from "./Profile";
 import ReactDOM from "react-dom/client"
 import Shimmer from "./shimmer";
+import { Provider } from "react-redux";
 // import Instamart from "./Instamart"
 import { lazy } from "react";
+import store from "../Util/store";
 
 const Instamart=lazy(()=>import("./Instamart") );
     const Applayout =()=>
     {
         return (
-            <>
+            
+            <Provider store={store}>
             <Header/>
             <Outlet/>
             <Footer/>
-            </>
+            </Provider>
+            
         )
     };
     const appRouter =createBrowserRouter([
