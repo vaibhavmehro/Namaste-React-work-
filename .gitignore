@@ -4,3 +4,4 @@ parcel catch
 package.json
 .parcel-cache
 .vscode
+coverage

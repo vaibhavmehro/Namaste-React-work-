@@ -3,6 +3,7 @@ import  logo from "../asset/logo.png";
 import { Link } from "react-router-dom";
 import userContext from "../Util/userContext";
 import { useSelector } from "react-redux";
+import {useOnline} from "../Util/useOnline"
 export const Title =() => {
     return (
         <a href="/">
@@ -35,6 +36,9 @@ export const Header =()=> {
            {logged?(<button  className="bg-green-500 w-100 border-radius: 0.375rem ring-2 ring-offset-2 hover:ring-offset-4" onClick={()=>setLogged(false) }>Logout</button>):
             (<button className="bg-red-500 w-100 border-radius: 0.375rem ring-2 ring-offset-2 hover:ring-offset-4"  onClick={()=>setLogged(true)}>Login</button>)}
             </div>
+            {/* <div>
+            <span>{useOnline}</span>
+            </div> */}
         
         </div>
     );
